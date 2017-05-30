@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+buildlist=flvparser
+
 if [ ! -f install ]; then
     echo 'install must be run within its container folder' 1>&2
     exit 1
@@ -10,7 +12,10 @@ OLDGOPATH="$GOPATH"
 export GOPATH="$CURDIR"
 
 gofmt -w src
-go build
+for p in $buildlist
+do
+    go build $p
+done
 
 export GOPATH="$OLDGOPATH"
 

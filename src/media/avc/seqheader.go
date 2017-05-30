@@ -1,6 +1,6 @@
 //Specification:
-// ISO/IEC 14496-10 Advanced Video Coding
-// ISO/IEC 14496-15 Advanced Video Coding (AVC) file format
+// ISO_IEC 14496-10 Advanced Video Coding
+// ISO_IEC 14496-15 Advanced Video Coding (AVC) file format
 package avc
 
 import (

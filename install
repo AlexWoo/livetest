@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-buildlist=flvparser
+buildlist="flvparser httpflv"
 
 if [ ! -f install ]; then
     echo 'install must be run within its container folder' 1>&2

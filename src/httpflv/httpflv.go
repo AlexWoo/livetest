@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"media"
 	"media/flv"
 	"net/http"
 	"os"
@@ -18,6 +19,8 @@ func main() {
 	}
 	defer res.Body.Close()
 
-	parser := flv.Create(res.Body)
+	log := media.NewLog(media.LogInfo, os.Stdout)
+
+	parser := flv.Create(res.Body, log)
 	parser.Parser()
 }
